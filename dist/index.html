@@ -327,7 +327,7 @@
         
         showStatus('Loading model...', 'loading');
         if (!modelSession) {
-          modelSession = await ort.InferenceSession.create('./transformer.onnx', {
+          modelSession = await ort.InferenceSession.create('./model.onnx', {
             executionProviders: ['webgpu'],
             graphOptimizationLevel: 'basic'
           });
